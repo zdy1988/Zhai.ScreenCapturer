@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+	<ApplicationIcon>favicon.ico</ApplicationIcon>
+	<AssemblyTitle>ZHAI SCREEN CAPTURER</AssemblyTitle>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<Title>ZHAI SCREEN CAPTURER</Title>
+		<Version>1.0.0.1</Version>
+		<Authors>ZDY</Authors>
+		<Copyright>Copyright © 2022 ZDY 保留所有权利。</Copyright>
+		<Description>诞生于我（ZDY）的个人兴趣，我会在有限的时间里维护这个软件。如果在使用的过程中发现什么BUG，欢迎发送描述信息和图片到我的邮箱，也可以在我的GitHub上留言，我会尽力改进软件...</Description>
+		<SignAssembly>True</SignAssembly>
+		<Product>ZHAI SCREEN CAPTURER</Product>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>favicon.ico</PackageIcon>
+		<AssemblyOriginatorKeyFile>Zhai.ScreenCapturer.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="favicon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    <PackageReference Include="Zhai.Famil" Version="1.3.12" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="favicon.ico" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

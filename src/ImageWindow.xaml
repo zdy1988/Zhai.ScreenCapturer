@@ -1,0 +1,26 @@
+﻿<ZDY:FamilWindow x:Class="Zhai.ScreenCapturer.ImageWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:ZDY="http://www.zdyla.com/coding"
+                 WindowStartupLocation ="CenterScreen"
+                 ResizeMode="NoResize"
+                 Title="截图结果" 
+                 Icon="favicon.ico"
+                 Height="450" Width="800"
+                 mc:Ignorable="d">
+    <Grid>
+        <Canvas x:Name="ImageContainer">
+            <Canvas.ContextMenu>
+                <ZDY:ContextMenu>
+                    <ZDY:ContextMenu.Items>
+                        <MenuItem x:Name="Copy" Icon="{ZDY:Icon Kind=VuesaxOutlineDocumentCopy}" Header="拷贝截图" Click="Copy_Click"/>
+                        <MenuItem x:Name="Save" Icon="{ZDY:Icon Kind=Save}" Header="保存截图" Click="Save_Click"/>
+                    </ZDY:ContextMenu.Items>
+                </ZDY:ContextMenu>
+            </Canvas.ContextMenu>
+        </Canvas>
+        <ZDY:Hint x:Name="Hint" FontWeight="Normal" CornerRadius="4" Background="{x:Static SystemColors.HighlightBrush}" Duration="0:0:5"/>
+    </Grid>
+</ZDY:FamilWindow>
